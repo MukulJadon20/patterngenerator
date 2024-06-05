@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generate Patterns</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="strip">
+
+    </div>
+    <div class="header">
+        <h1>Pattern Generator</h1>
+        <p>Pattern generator revise your coding pattern in easy way</p>
+
+    </div>
+
+
+    <form id="patternForm">
+        <div class="form-group">
+            <label for="patternType" class="select_pattern"> Select Pattern :</label>
+            <select id="patternType">
+                <option value="rectangle">Rectangle</option>
+                <option value="hollowRectangle">Hollow Rectangle</option>
+                <option value="triangle">Triangle</option>
+                <option value="hollowtriangle">Hollow Triangle</option>
+                <option value="hollowpyramid">Hollow Pyramid</option>
+                <option value="pyramid">Pyramid</option>
+                <option value="flag">Flag</option>
+            </select>
+
+            <label for="patternSize" class="pattern_size">Pattern Size:</label>
+            <input type="text" id="patternSize" placeholder="e.g. 5">
+
+            <label for="delay">Animate (seconds):</label>
+            <input type="range" id="delay" min="0.1" max="2" step="0.1" value="0.3">
+
+            <button type="button" onclick="generatePattern()">Generate</button>
+            
+        </div>
+
+
+        <div class="display_right">
+            <p class="p1" id="p1">Pattern </p>
+            <div class="pattern-container">
+                <pre class="pattern" id="pattern"></pre>
+            </div>
+            <div class="buttons">
+                <button type="button" class="button2" id="copy-button">Copy Code</button>
+                <button type="button" class="button3" id="show-code-button">
+                    <>Show Code
+                </button>
+                <button type="button" class="button4" id="clear-button">Clear</button>
+            </div>
+
+
+
+        </div>
+
+    </form>
+
+    <script src="create.js"></script>
+</body>
+
+</html>
